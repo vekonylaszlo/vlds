@@ -1,23 +1,6 @@
-# Rslib project
+## vlds
+Shi**y design system
 
-## Setup
-
-Install the dependencies:
-
-```bash
-pnpm install
-```
-
-## Get started
-
-Build the library:
-
-```bash
-pnpm build
-```
-
-Build the library in watch mode:
-
-```bash
-pnpm dev
-```
+### Usage
+Install the package via `bun add @vekonylaszlo/vlds`.
+Import the css file:  `import '@vekonylaszlo/vlds/dist/index.css'`
