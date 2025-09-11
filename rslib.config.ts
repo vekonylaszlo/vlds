@@ -16,7 +16,12 @@ export default defineConfig({
 	],
 	output: {
 		target: 'web',
-		emitCss: true
+		emitCss: true,
+		copy: {
+			patterns: [{
+				from: "./src/index.css", to: "./tw.css"
+			}]
+		}
 	},
 	plugins: [pluginReact()],
 	tools: {
