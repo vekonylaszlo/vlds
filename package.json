@@ -1,6 +1,6 @@
 {
 	"name": "@vekonylaszlo/vlds",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"type": "module",
 	"exports": {
 		".": {
@@ -11,8 +11,8 @@
 		"./dist/index.css": {
 			"default": "./dist/index.css"
 		},
-		"./tw.css": {
-			"default": "./tw.css"
+		"./dist/tw.css": {
+			"default": "./dist/tw.css"
 		}
 	},
 	"types": "./dist/index.d.ts",
