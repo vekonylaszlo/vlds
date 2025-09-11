@@ -186,10 +186,6 @@
 }
 
 @layer base {
-	* {
-		font-family: 'Inter';
-	}
-
 	body {
 		@apply bg-background text-foreground;
 	}
