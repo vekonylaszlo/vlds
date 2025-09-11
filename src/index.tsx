@@ -13,6 +13,7 @@ export { Text } from './text'
 export { Tab, Tabs, TabIndicator, TabsList, TabPanel } from './tabs'
 export { Page } from './page'
 export { ToastClose, ToastRoot, ToastTitle, ToastViewPort, ToastProvider, ToastList, ToastPortal, ToastDescription } from './toast'
+export { Flex } from './flex'
 
 export type { InputProps } from './input'
 export type { ButtonProps, ButtonVariants } from './button'
@@ -24,3 +25,4 @@ export type { MenuPositionerProps, MenuRootProps, MenuTriggerProps, MenuPortalPr
 export type { TextProps } from './text'
 export type { TabsListProps, TabsProps, TabProps, TabPanelProps, TabIndicatorProps } from './tabs'
 export type { ToastRootProps, ToastProviderProps, ToastTitleProps, ToastViewPortProps, ToastPortalProps, ToastDescriptionProps, ToastCloseProps } from './toast'
+export type { FlexProps } from './flex'
