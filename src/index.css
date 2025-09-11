@@ -184,9 +184,3 @@
 	--shadow-toast-success: var(--toast-success-shadow);
 	--shadow-toast-danger: var(--toast-danger-shadow);
 }
-
-@layer base {
-	body {
-		@apply bg-background text-foreground;
-	}
-}
