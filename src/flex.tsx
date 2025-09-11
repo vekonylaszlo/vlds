@@ -10,8 +10,8 @@ export interface FlexProps extends React.ComponentProps<'div'> {
 }
 export function Flex({ gap = "gap-4", direction = "row", align = "start", justify = "normal", children, className, ...props }: FlexProps) {
 	return (
-		<div {...props} className={cn("flex w-full h-full", gap, {
-			"flex-col": direction === "column",
+		<div {...props} className={cn("flex w-full h-full overflow-x-auto", gap, {
+			"flex-col overflow-y-auto": direction === "column",
 			"items-start": align === "start",
 			"items-end": align === "end",
 			"items-center": align === "center",
@@ -27,7 +27,7 @@ export function Flex({ gap = "gap-4", direction = "row", align = "start", justif
 			"justify-baseline": justify === "baseline",
 		}, className)} >
 			{React.Children.map(children, (child, i) => (
-				<React.Fragment key={`flex-item-${i}`}>{child}</React.Fragment>
+				<div key={`flex-item-${i}`}>{child}</div>
 			))}
 		</div>
 	)
