@@ -27,7 +27,7 @@ export function Flex({ gap = "gap-4", direction = "row", align = "start", justif
 			"justify-baseline": justify === "baseline",
 		}, className)} >
 			{React.Children.map(children, (child, i) => (
-				<div key={`flex-item-${i}`}>{child}</div>
+				<React.Fragment key={`flex-item-${i}`}>{child}</React.Fragment>
 			))}
 		</div>
 	)
