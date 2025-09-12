@@ -12,7 +12,7 @@ export { MenuItem, MenuPopup, MenuTrigger, MenuRoot, MenuPositioner, MenuPortal 
 export { Text } from './text'
 export { Tab, Tabs, TabIndicator, TabsList, TabPanel } from './tabs'
 export { Page } from './page'
-export { ToastClose, ToastRoot, ToastTitle, ToastViewPort, ToastProvider, ToastList, ToastPortal, ToastDescription } from './toast'
+export { ToastClose, ToastRoot, ToastTitle, ToastViewPort, ToastProvider, ToastList, ToastPortal, ToastDescription, Toast, useToastManager } from './toast'
 export { Flex } from './flex'
 export { Alert } from './alert'
 

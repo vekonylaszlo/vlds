@@ -88,3 +88,5 @@ export function ToastList() {
 }
 
 
+export const { useToastManager } = ToastPrimitive;
+export { ToastPrimitive as Toast }
