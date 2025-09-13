@@ -15,6 +15,7 @@ export { Page } from './page'
 export { ToastClose, ToastRoot, ToastTitle, ToastViewPort, ToastProvider, ToastList, ToastPortal, ToastDescription, Toast, useToastManager } from './toast'
 export { Flex } from './flex'
 export { Alert } from './alert'
+export { Tooltip, TooltipArrow, TooltipProvider, TooltipRoot, TooltipTrigger, TooltipPositioner, TooltipPortal, TooltipPopup } from './tooltip'
 
 export type { InputProps } from './input'
 export type { ButtonProps, ButtonVariants } from './button'
@@ -28,3 +29,4 @@ export type { TabsListProps, TabsProps, TabProps, TabPanelProps, TabIndicatorPro
 export type { ToastRootProps, ToastProviderProps, ToastTitleProps, ToastViewPortProps, ToastPortalProps, ToastDescriptionProps, ToastCloseProps } from './toast'
 export type { FlexProps } from './flex'
 export type { AlertProps } from './alert'
+export type { TooltipProviderProps, TooltipProps, TooltipPositionerProps, TooltipRootProps, TooltipTriggerProps, TooltipPortalProps, TooltipPopupProps, TooltipArrowProps } from './tooltip'
