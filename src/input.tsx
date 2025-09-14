@@ -6,8 +6,8 @@ export type InputProps = React.ComponentProps<typeof InputPrimitive>;
 export function Input({
 	className,
 	...props
-}: React.ComponentProps<typeof InputPrimitive>) {
+}: InputProps) {
 	return (
-		<InputPrimitive className={cn("transition-all bg-input text-foreground h-9 w-full max-w-64 rounded-md pl-3.5 text-base outline outline-zinc-950/10 shadow-input placeholder:text-muted-foreground", className)} {...props} />
+		<InputPrimitive className={cn("transition-all duration-200 bg-input text-foreground h-9 w-full rounded-md pl-3.5 text-base outline outline-input-ring focus-visible:ring-2 focus-visible:ring-input-ring shadow-input placeholder:text-muted-foreground", className)} {...props} />
 	)
 }

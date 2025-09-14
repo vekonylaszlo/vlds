@@ -16,6 +16,7 @@ export { ToastClose, ToastRoot, ToastTitle, ToastViewPort, ToastProvider, ToastL
 export { Flex } from './flex'
 export { Alert } from './alert'
 export { Tooltip, TooltipArrow, TooltipProvider, TooltipRoot, TooltipTrigger, TooltipPositioner, TooltipPortal, TooltipPopup } from './tooltip'
+export { Textarea } from './textarea'
 
 export type { InputProps } from './input'
 export type { ButtonProps, ButtonVariants } from './button'
@@ -30,3 +31,4 @@ export type { ToastRootProps, ToastProviderProps, ToastTitleProps, ToastViewPort
 export type { FlexProps } from './flex'
 export type { AlertProps } from './alert'
 export type { TooltipProviderProps, TooltipProps, TooltipPositionerProps, TooltipRootProps, TooltipTriggerProps, TooltipPortalProps, TooltipPopupProps, TooltipArrowProps } from './tooltip'
+export type { TextareaProps } from './textarea'
