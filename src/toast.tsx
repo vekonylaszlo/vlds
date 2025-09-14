@@ -37,13 +37,13 @@ export function ToastRoot({ className, ...props }: React.ComponentProps<typeof T
 export type ToastRootProps = React.ComponentProps<typeof ToastPrimitive.Root>;
 
 export function ToastTitle({ className, ...props }: React.ComponentProps<typeof ToastPrimitive.Title>) {
-	return <ToastPrimitive.Title className={cn("text-[0.975rem] text-foreground leading-5 font-medium", className)} {...props} />
+	return <ToastPrimitive.Title className={cn("text-[0.975rem] text-toast-foreground leading-5 font-medium", className)} {...props} />
 }
 
 export type ToastTitleProps = React.ComponentProps<typeof ToastPrimitive.Title>;
 
 export function ToastDescription({ className, ...props }: React.ComponentProps<typeof ToastPrimitive.Description>) {
-	return <ToastPrimitive.Description className={cn("text-[0.925rem] text-foreground leading-5", className)} {...props} />
+	return <ToastPrimitive.Description className={cn("text-[0.925rem] text-toast-foreground leading-5", className)} {...props} />
 }
 
 export type ToastDescriptionProps = React.ComponentProps<typeof ToastPrimitive.Description>;
@@ -59,21 +59,11 @@ export function ToastList() {
 	const { toasts } = ToastPrimitive.useToastManager();
 	return toasts.map((toast) => (
 		<ToastRoot key={toast.id} toast={toast}>
-			<div className={cn('absolute left-0 top-0 rounded-l-md h-full w-2.5', {
-				"bg-toast-hl-background-warning": toast.type === "warning",
-				"bg-toast-hl-background-danger": toast.type === "danger",
-				"bg-toast-hl-background-success": toast.type === "success",
-			})} />
-			<div className={cn('absolute left-2 blur-[26px] top-0 rounded-l-md h-full w-2.5', {
-				"bg-toast-hl-background-warning": toast.type === "warning",
-				"bg-toast-hl-background-danger": toast.type === "danger",
-				"bg-toast-hl-background-success": toast.type === "success",
-			})} />
-			<div className='absolute top-4 left-4'>
+			<div className='absolute top-4 left-4 text-toast-foreground'>
 				{toast.type === "warning" && <WarningCircleIcon size={22} />}
 				{toast.type === "danger" && <SirenIcon size={22} />}
 				{toast.type === "success" && <CheckCircleIcon size={22} />}
-				{toast.type === "" && <InfoIcon size={22} />}
+				{!toast.type && <InfoIcon size={22} />}
 			</div>
 			<div className='pl-8'>
 

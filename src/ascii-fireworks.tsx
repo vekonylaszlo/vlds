@@ -177,7 +177,7 @@ const ASCIIFireworks = ({ children }: Props) => {
 
 	return (
 		<FireworksContext.Provider value={{ startFireworks, stopFireworks, clearAll, isActive }}>
-			<div className="relative w-full h-screen overflow-hidden flex justify-center">
+			<div className="relative w-screen h-screen overflow-hidden flex flex-col justify-center">
 				<div className="relative w-full left-1/2 top-[33%] h-full z-50">
 					{/* Rockets */}
 					<div className="absolute inset-0 pointer-events-none z-50">
