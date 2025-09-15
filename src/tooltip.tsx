@@ -1,3 +1,4 @@
+import { HTMLProps } from 'react';
 import { cn } from './utils';
 import { Tooltip as TooltipPrimitive } from '@base-ui-components/react/tooltip';
 
@@ -47,14 +48,20 @@ export function TooltipArrow({ className, ...props }: React.ComponentProps<typeo
 export type TooltipArrowProps = React.ComponentProps<typeof TooltipPrimitive.Arrow>;
 
 
-export type TooltipProps = { children: React.ReactNode, content: string }
+export type TooltipProps = {
+	children:
+	| React.ReactElement<Record<string, unknown>, string | React.JSXElementConstructor<any>>
+	| ((
+		props: React.HTMLProps<any>,
+		state: TooltipPrimitive.Trigger.State
+	) => React.ReactElement);
+	content: string;
+};
 
 export function Tooltip({ children, content }: TooltipProps) {
 	return (
 		<TooltipRoot>
-			<TooltipTrigger>
-				{children}
-			</TooltipTrigger>
+			<TooltipTrigger render={children} />
 			<TooltipPortal>
 				<TooltipPositioner>
 					<TooltipPopup>
