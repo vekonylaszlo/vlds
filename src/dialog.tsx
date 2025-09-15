@@ -43,7 +43,7 @@ export function DialogPopup({ title, description, className, ...props }: React.C
 				<div className="flex flex-col gap-4 w-2/3 h-full items-center">
 					<div className="flex flex-col w-full text-left h-full">
 						<DialogTitle className="mb-6 pl-2">{title}</DialogTitle>
-						{description && <DialogDescription>yo description</DialogDescription>}
+						{description && <DialogDescription>{description}</DialogDescription>}
 						<div className='h-full w-full flex flex-col overflow-y-auto p-2'>
 							{props.children}
 						</div>
@@ -75,7 +75,7 @@ export type DialogTitleProps = React.ComponentProps<typeof DialogPrimitive.Title
 
 export function DialogDescription({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Description>) {
 	return (
-		<DialogPrimitive.Description className={cn("mb-6 text-sm text-muted-foreground", className)} {...props} />
+		<DialogPrimitive.Description className={cn("mb-6 ml-2.5 text-sm text-muted-foreground", className)} {...props} />
 	)
 }
 
