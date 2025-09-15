@@ -36,7 +36,7 @@ export function TooltipPositioner({ className, sideOffset = 10, ...props }: Reac
 export type TooltipPositionerProps = React.ComponentProps<typeof TooltipPrimitive.Positioner>;
 
 export function TooltipPopup({ className, ...props }: React.ComponentProps<typeof TooltipPrimitive.Popup>) {
-	return <TooltipPrimitive.Popup className={cn("flex origin-[var(--transform-origin)] flex-col rounded-md bg-popover/90 backdrop-blur-2xl text-popover-foreground px-2 py-1 text-sm shadow-lg  outline outline-zinc-950/20 transition-[transform,scale,opacity] data-[ending-style]:scale-90 data-[ending-style]:opacity-0 data-[instant]:duration-0 data-[starting-style]:scale-90 data-[starting-style]:opacity-0", className)} {...props} />
+	return <TooltipPrimitive.Popup className={cn("flex origin-[var(--transform-origin)] flex-col rounded-md bg-popover/90 backdrop-blur-2xl text-popover-foreground px-2 py-1 text-sm shadow-lg max-w-xs text-balance ring ring-ring transition-[transform,scale,opacity] data-[ending-style]:scale-90 data-[ending-style]:opacity-0 data-[instant]:duration-0 data-[starting-style]:scale-90 data-[starting-style]:opacity-0", className)} {...props} />
 }
 
 export type TooltipPopupProps = React.ComponentProps<typeof TooltipPrimitive.Popup>;
@@ -65,10 +65,28 @@ export function Tooltip({ children, content }: TooltipProps) {
 			<TooltipPortal>
 				<TooltipPositioner>
 					<TooltipPopup>
+						<TooltipArrow>
+							<ArrowSvg />
+						</TooltipArrow>
 						{content}
 					</TooltipPopup>
 				</TooltipPositioner>
 			</TooltipPortal>
 		</TooltipRoot>
 	)
+}
+
+function ArrowSvg(props: React.ComponentProps<'svg'>) {
+	return (
+		<svg width="20" height="10" viewBox="0 0 20 10" fill="none" {...props}>
+			<path
+				d="M9.66437 2.60207L4.80758 6.97318C4.07308 7.63423 3.11989 8 2.13172 8H0V10H20V8H18.5349C17.5468 8 16.5936 7.63423 15.8591 6.97318L11.0023 2.60207C10.622 2.2598 10.0447 2.25979 9.66437 2.60207Z"
+				className="fill-popover"
+			/>
+			<path
+				d="M8.99542 1.85876C9.75604 1.17425 10.9106 1.17422 11.6713 1.85878L16.5281 6.22989C17.0789 6.72568 17.7938 7.00001 18.5349 7.00001L15.89 7L11.0023 2.60207C10.622 2.2598 10.0447 2.2598 9.66436 2.60207L4.77734 7L2.13171 7.00001C2.87284 7.00001 3.58774 6.72568 4.13861 6.22989L8.99542 1.85876Z"
+				className="fill-ring"
+			/>
+		</svg>
+	);
 }
