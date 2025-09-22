@@ -23,14 +23,11 @@ function getIcon(variant: "info" | "warning" | "danger" | "success") {
 
 export function Alert({ children, description, variant = "info", className, ...props }: AlertProps) {
 	return (
-		<Flex direction="column" {...props} className={cn("w-fit h-fit max-w-md py-2 px-4 rounded-lg gap-0", {
+		<Flex direction="column" {...props} className={cn("w-fit h-fit max-w-full lg:min-w-lg py-2 px-4 rounded-md gap-0", {
 			"bg-alert-success text-alert-foreground-success shadow-alert-success ": variant === "success",
 			"bg-alert-warning text-alert-foreground-warning shadow-alert-warning": variant === "warning",
 			"bg-alert-danger text-alert-foreground-danger shadow-alert-danger ": variant === "danger",
 			"bg-alert-info text-alert-foreground-info shadow-alert-info": variant === "info",
-
-
-			"rounded-full": !description
 		}, className)}>
 			<Flex justify="center" className="w-fit h-fit">
 				{getIcon(variant)}

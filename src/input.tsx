@@ -8,6 +8,6 @@ export function Input({
 	...props
 }: InputProps) {
 	return (
-		<InputPrimitive className={cn("transition-all duration-200 bg-input text-foreground h-9 w-full rounded-md pl-3.5 text-base outline outline-input-ring focus-visible:ring-2 focus-visible:ring-input-ring shadow-input placeholder:text-muted-foreground", className)} {...props} />
+		<InputPrimitive className={cn("transition-all duration-200 bg-input text-foreground h-9 w-full rounded-md pl-3.5 text-base outline outline-input-ring focus-visible:ring-4 focus-visible:ring-accent/25 focus-visible:outline-accent shadow-input placeholder:text-muted-foreground", className)} {...props} />
 	)
 }

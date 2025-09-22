@@ -14,3 +14,5 @@ storybook-static
 !.vscode/extensions.json
 .idea
 *.tgz
+
+*storybook.log

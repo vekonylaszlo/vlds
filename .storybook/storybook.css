@@ -1,0 +1,9 @@
+#storybook-root {
+	background-color: var(--color-background);
+	color: var(--color-foreground);
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

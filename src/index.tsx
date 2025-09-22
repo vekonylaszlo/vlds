@@ -18,10 +18,14 @@ export { Alert } from './alert'
 export { Tooltip, TooltipArrow, TooltipProvider, TooltipRoot, TooltipTrigger, TooltipPositioner, TooltipPortal, TooltipPopup } from './tooltip'
 export { Textarea } from './textarea'
 export { Table, TableBody, TableHeader, TableHead, TableRow, TableFooter, TableCell, TableCaption } from './table'
+export { Switch } from './switch'
+export { Checkbox } from './checkbox'
+export { Gauge } from './gauge'
 
 export type { InputProps } from './input'
 export type { ButtonProps, ButtonVariants } from './button'
 export type { ComboboxPortalProps, ComboboxPopupProps, ComboboxListProps, ComboboxPositionerProps, ComboboxRootProps, ComboboxItemProps, ComboboxTriggerProps, ComboboxItemIndicatorProps, ComboboxInputProps, ComboboxClearProps, ComboboxEmptyProps } from './combobox'
+
 
 export type { DialogRootProps, DialogPortalProps, DialogTitleProps, DialogPopupProps, DialogTriggerProps, DialogDescriptionProps, DialogCloseProps, DialogBackdropProps } from './dialog'
 
@@ -34,3 +38,6 @@ export type { AlertProps } from './alert'
 export type { TooltipProviderProps, TooltipProps, TooltipPositionerProps, TooltipRootProps, TooltipTriggerProps, TooltipPortalProps, TooltipPopupProps, TooltipArrowProps } from './tooltip'
 export type { TextareaProps } from './textarea'
 export type { TableHeaderProps, TableFooterProps, TableHeadProps, TableProps, TableRowProps, TableCellProps, TableCaptionProps, TableBodyProps } from './table'
+export type { SwitchProps } from './switch'
+export type { CheckboxProps } from './checkbox'
+export type { GaugeProps } from './gauge'

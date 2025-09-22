@@ -57,7 +57,7 @@ const ASCIIFireworks = ({ children }: Props) => {
 
 	useEffect(() => {
 		let animationFrame: number;
-		let rocketInterval: number;
+		let rocketInterval: any;
 
 		if (isActive) {
 			// Add new rockets periodically

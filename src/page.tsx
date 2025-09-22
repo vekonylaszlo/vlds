@@ -13,10 +13,10 @@ type WithTabs = {
 	tabs: {
 		label: string;
 		content: ReactNode;
-		default?: boolean;
-		state?: string;
+		default?: boolean | undefined;
+		state?: string | undefined;
 	}[];
-	globalActions?: never;
+	globalActions?: ReactNode[];
 };
 
 type WithGlobalActions = {
