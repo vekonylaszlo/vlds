@@ -4,6 +4,6 @@ import { cn } from './utils';
 export type FormProps = FormPrimitive.Props;
 
 export function Form({ className, ...props }: FormProps) {
-	return <Form className={cn("flex flex-col gap-4", className)} {...props} />
+	return <FormPrimitive className={cn("flex flex-col gap-4", className)} {...props} />
 }
 

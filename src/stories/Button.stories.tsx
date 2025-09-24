@@ -114,3 +114,10 @@ export const Icon: Story = {
 		children: <ConfettiIcon />
 	},
 }
+
+export const Loading: Story = {
+	args: {
+		children: <div className='flex items-center gap-2'><ConfettiIcon />Hoorah</div>,
+		loading: true
+	},
+}
