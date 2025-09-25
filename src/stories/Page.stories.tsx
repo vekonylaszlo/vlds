@@ -38,7 +38,11 @@ export const WithTabs: Story = {
 		globalActions: [<Button>Action 1</Button>, <Button variant="secondary">Action 2</Button>],
 		tabs: [{
 			label: "Tab 1",
-			content: <div className='flex w-ful h-full'>content of tab 1</div>,
+			content: <div className='flex w-full h-full justify-center items-center '>
+				<div className='flex w-[420px] h-[280px] rounded-md bg-card border border-border text-center'>
+					card
+				</div>
+			</div>,
 			default: true,
 		}, {
 			label: "Tab 2",

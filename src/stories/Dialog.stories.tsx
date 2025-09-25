@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { DialogBackdrop, DialogClose, DialogDescription, DialogPopup, DialogPortal, DialogRoot, DialogTrigger } from '../dialog';
 import { Button } from '../button';
+import { Flex } from '../flex';
 
 const meta = {
 	title: 'Example/Dialog',
@@ -70,6 +71,28 @@ export const FullscreenDialogComponent: Story = {
 								</DialogRoot>
 							</div>
 						</div>
+					</DialogPopup>
+				</DialogPortal>
+			</DialogRoot>
+		</div>
+	)
+};
+
+export const AlertDialogComponent: Story = {
+	args: {
+	},
+	render: (args) => (
+		<div className='flex flex-col gap-1 focus-visible:outline-none'>
+			<DialogRoot>
+				<DialogTrigger render={<Button>View notifications</Button>} />
+
+				<DialogPortal>
+					<DialogBackdrop />
+					<DialogPopup title='Are you sure?' description='You will remove the files'>
+						<Flex className='p-2 flex-row-reverse'>
+							<Button>Yeah</Button>
+							<Button variant="secondary">Cancel</Button>
+						</Flex>
 					</DialogPopup>
 				</DialogPortal>
 			</DialogRoot>

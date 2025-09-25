@@ -5,7 +5,7 @@
 :root {
 	--background: oklch(1 0 0);
 	--foreground: oklch(0.145 0 0);
-	--card: oklch(1 0 0);
+	--card: oklch(0.99 0 0);
 	--card-foreground: oklch(0.145 0 0);
 	--popover: oklch(1 0 197.12);
 	--popover-foreground: oklch(0.145 0 0);
@@ -58,6 +58,7 @@
 	--toast-warning-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 	--toast-success-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
 	--toast-danger-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+	--material-modal-shadow: 0 1px 1px rgba(0, 0, 0, .03), 0 8px 16px -4px rgba(0, 0, 0, .04), 0 24px 32px -8px rgba(0, 0, 0, 0.3);
 
 	--alert-info: oklch(0.97 0.01 251.56);
 	--alert-success: oklch(0.98 0.02 145.42);
@@ -71,14 +72,14 @@
 
 	--alert-info-shadow: oklch(0.53 0.19 256.73) 0 0 1px, oklch(0.53 0.19 256.73 / 0.2) 0px 1px 6px;
 	--alert-warning-shadow: oklch(0.53 0.13 54.65) 0px 0 1px, oklch(0.53 0.13 54.65 / 0.2) 0px 1px 6px;
-	--alert-success-shadow:  oklch(0.51 0.13 147.43) 0 0 1px, oklch(0.51 0.13 147.43 / 0.2) 0px 1px 6px;
+	--alert-success-shadow: oklch(0.51 0.13 147.43) 0 0 1px, oklch(0.51 0.13 147.43 / 0.2) 0px 1px 6px;
 	--alert-danger-shadow: oklch(0.55 0.2 25.29) 0 0 1px, oklch(0.55 0.2 25.29 / 0.2) 0px 1px 6px;
 }
 
 .dark {
 	--background: oklch(0 0 0);
 	--foreground: oklch(0.97 0 325.59);
-	--card: oklch(0.24 0.02 284.84);
+	--card: oklch(0.14 0 0);
 	--card-foreground: oklch(0.985 0 0);
 	--popover: oklch(0.2 0 0 / 0.8);
 	--popover-foreground: oklch(0.985 0 0);
@@ -144,7 +145,7 @@
 
 	--alert-info-shadow: oklch(0.72 0.15 251) 0 0 1px;
 	--alert-warning-shadow: oklch(0.77 0.16 73.3) 0px 0 1px;
-	--alert-success-shadow:  oklch(0.73 0.14 147.99) 0 0 1px;
+	--alert-success-shadow: oklch(0.73 0.14 147.99) 0 0 1px;
 	--alert-danger-shadow: oklch(0.7 0.19 21.75) 0 0 1px;
 }
 
@@ -179,6 +180,7 @@
 	--radius-md: var(--radius);
 	--radius-lg: calc(var(--radius) + 2px);
 	--radius-xl: calc(var(--radius) + 4px);
+	--shadow-lg: var(--material-modal-shadow);
 	--color-sidebar: var(--sidebar);
 	--color-sidebar-foreground: var(--sidebar-foreground);
 	--color-sidebar-primary: var(--sidebar-primary);
