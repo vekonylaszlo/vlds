@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { DialogBackdrop, DialogClose, DialogDescription, DialogPopup, DialogPortal, DialogRoot, DialogTrigger } from '../dialog';
+import { DialogBackdrop, DialogDescription, DialogPopup, DialogPortal, DialogRoot, DialogTrigger } from '../dialog';
 import { Button } from '../button';
 import { Flex } from '../flex';
 
@@ -15,9 +15,7 @@ type Story = StoryObj<typeof meta>;
 
 
 export const DialogComponent: Story = {
-	args: {
-	},
-	render: (args) => (
+	render: () => (
 		<div className='flex flex-col gap-1 focus-visible:outline-none'>
 			<DialogRoot>
 				<DialogTrigger render={<Button>View notifications</Button>} />
