@@ -52,7 +52,7 @@ function FormExample() {
 					pattern="https?://.*" />
 				<FieldError />
 			</Field>
-			<Button type="submit" loading={loading}>Submit</Button>
+			<Button type="submit">Submit</Button>
 		</Form>
 	)
 }
