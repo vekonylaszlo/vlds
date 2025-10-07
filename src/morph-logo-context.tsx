@@ -64,6 +64,7 @@ export function MorphLogoProvider({ children }: { children: ReactNode }) {
 				setTimeout(() => {
 					setAnimationName('idle')
 					setCurrentPattern(patternsMap.idle);
+					setFrame(0);
 					setShouldLoop(false);
 					setIsAnimating(true);
 				}, delay);
