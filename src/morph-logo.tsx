@@ -258,9 +258,68 @@ export const uploadPattern: Frame[][] = [
 	],
 ]
 
+export const errorPattern: Frame[][] = [
+	[
+		['high', 'low', 'low', 'low', 'high'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+	],
+	[
+		['low', 'high', 'low', 'high', 'low'],
+		['high', 'low', 'low', 'low', 'high'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+	],
+	[
+		['low', 'low', 'high', 'low', 'low'],
+		['low', 'high', 'low', 'high', 'low'],
+		['high', 'low', 'low', 'low', 'high'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+	],
+	[
+		['low', 'high', 'low', 'high', 'low'],
+		['low', 'low', 'high', 'low', 'low'],
+		['low', 'high', 'low', 'high', 'low'],
+		['high', 'low', 'low', 'low', 'high'],
+		['low', 'low', 'low', 'low', 'low'],
+	],
+	[
+		['high', 'low', 'low', 'low', 'high'],
+		['low', 'high', 'low', 'high', 'low'],
+		['low', 'low', 'high', 'low', 'low'],
+		['low', 'high', 'low', 'high', 'low'],
+		['high', 'low', 'low', 'low', 'high'],
+	],
+	[
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+	],
+	[
+		['high', 'low', 'low', 'low', 'high'],
+		['low', 'high', 'low', 'high', 'low'],
+		['low', 'low', 'high', 'low', 'low'],
+		['low', 'high', 'low', 'high', 'low'],
+		['high', 'low', 'low', 'low', 'high'],
+	],
+	[
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+		['low', 'low', 'low', 'low', 'low'],
+	],
+]
+
 
 export function MorphLogo() {
-	const { currentPattern } = useMorphLogo();
+	const { currentPattern, animationName } = useMorphLogo();
 	const frameData = currentPattern[0];
 	const cols = 5;
 
@@ -278,6 +337,8 @@ export function MorphLogo() {
 								'bg-transparent': state === 'off',
 								'bg-alert-info': state === 'low',
 								'bg-alert-foreground-info': state === 'high',
+								'bg-alert-danger': state === 'low' && animationName === 'error',
+								'bg-alert-foreground-danger': state === 'high' && animationName === 'error',
 							})}
 						/>
 					)),
@@ -286,3 +347,5 @@ export function MorphLogo() {
 		</div>
 	);
 }
+
+

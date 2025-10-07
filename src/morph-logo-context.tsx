@@ -6,14 +6,16 @@ import {
 	downloadPattern,
 	uploadPattern,
 	Frame,
+	errorPattern,
 } from './morph-logo';
 
-export type MorphAnimationName = 'idle' | 'upload' | 'download' | 'busy' | 'loading';
+export type MorphAnimationName = 'idle' | 'upload' | 'download' | 'busy' | 'loading' | 'error';
 
 export interface MorphLogoContextValue {
 	frame: number;
 	currentPattern: Frame[][];
 	setAnimation: (name: MorphAnimationName, loop?: boolean) => void;
+	animationName: MorphAnimationName
 }
 
 export const MorphLogoContext = createContext<MorphLogoContextValue | null>(null);
@@ -25,12 +27,14 @@ export function MorphLogoProvider({ children }: { children: ReactNode }) {
 		download: downloadPattern,
 		busy: pingPongPattern,
 		loading: hourglassPattern,
+		error: errorPattern
 	};
 
 	const [frame, setFrame] = useState(0);
 	const [currentPattern, setCurrentPattern] = useState<Frame[][]>(patternsMap.idle);
 	const [isAnimating, setIsAnimating] = useState(false);
 	const [shouldLoop, setShouldLoop] = useState(false);
+	const [animationName, setAnimationName] = useState<MorphAnimationName>('idle');
 
 	useEffect(() => {
 		if (!isAnimating) return;
@@ -49,13 +53,16 @@ export function MorphLogoProvider({ children }: { children: ReactNode }) {
 
 	const setAnimation = useCallback(
 		(name: MorphAnimationName, loop = false) => {
+			setAnimationName(name)
 			setCurrentPattern(patternsMap[name]);
+			setFrame(0);
 			setShouldLoop(loop);
 			setIsAnimating(true);
 
 			if (name === 'idle' && !loop) {
 				const delay = Math.random() * (5 - 1) * 60_000 + 60_000;
 				setTimeout(() => {
+					setAnimationName('idle')
 					setCurrentPattern(patternsMap.idle);
 					setShouldLoop(false);
 					setIsAnimating(true);
@@ -66,7 +73,7 @@ export function MorphLogoProvider({ children }: { children: ReactNode }) {
 	);
 
 	return (
-		<MorphLogoContext.Provider value={{ frame, currentPattern: currentPattern[frame] ? [currentPattern[frame]] : [[]], setAnimation }}>
+		<MorphLogoContext.Provider value={{ frame, currentPattern: currentPattern[frame] ? [currentPattern[frame]] : [[]], animationName, setAnimation }}>
 			{children}
 		</MorphLogoContext.Provider>
 	);

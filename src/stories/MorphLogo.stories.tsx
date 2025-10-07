@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "storybook-react-rsbuild";
 import { MorphLogo } from "../morph-logo";
 import { MorphLogoProvider, useMorphLogo } from "../morph-logo-context";
 import { Button } from "../button";
-import { ArrowDownIcon, ArrowUpIcon, HourglassIcon, PingPongIcon, PlayIcon, SpiralIcon } from "@phosphor-icons/react";
+import { ArrowDownIcon, ArrowUpIcon, ExclamationMarkIcon, HourglassIcon, PingPongIcon, PlayIcon, SpiralIcon } from "@phosphor-icons/react";
 import { Switch } from "../switch";
 import { useState } from "react";
 
@@ -51,6 +51,9 @@ function MorphLogoTest() {
 			</Button>
 			<Button variant="secondary" size="icon" onClick={() => { morph.setAnimation('upload', isAnimating) }}>
 				<ArrowUpIcon />
+			</Button>
+			<Button variant="destructive" size="icon" onClick={() => { morph.setAnimation('error', isAnimating) }}>
+				<ExclamationMarkIcon />
 			</Button>
 		</div>
 	)
