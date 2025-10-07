@@ -3,13 +3,27 @@ import { cn } from './utils';
 
 export type SwitchProps = React.ComponentProps<typeof SwitchPrimitive.Root>;
 
-export function Switch({ className, ...props }: SwitchProps) {
+function Switch({
+	className,
+	...props
+}: React.ComponentProps<typeof SwitchPrimitive.Root>) {
 	return (
 		<SwitchPrimitive.Root
+			data-slot="switch"
+			className={cn(
+				"peer data-[checked]:bg-primary data-[unchecked]:bg-secondary inline-flex h-[1.15rem] w-8 shrink-0 items-center rounded-full outline outline-input-ring focus-visible:ring-4 focus-visible:ring-ring focus-visible:outline-accent shadow-input disabled:cursor-not-allowed disabled:opacity-50",
+				className
+			)}
 			{...props}
-			className={cn("relative items-center flex h-[24px] w-[54px] rounded-full transition-[background-position,box-shadow] duration-[125ms] ease-[cubic-bezier(0.26,0.75,0.38,0.45)] before:absolute focus-visible:ring-4 focus-visible:ring-accent/25 focus-visible:outline focus-visible:outline-accent bg-secondary-hover active:bg-accent/25 data-[checked]:bg-accent p-[2px]", className)}
 		>
-			<SwitchPrimitive.Thumb className="h-full rounded-full w-[32px] h-full bg-white transition-transform duration-150 data-[checked]:translate-x-[18px] data-[checked]:translate-y-[-0.5px] shadow-input data-[unchecked]:ring ring-input" />
+			<SwitchPrimitive.Thumb
+				data-slot="switch-thumb"
+				className={cn(
+					"bg-background pointer-events-none block size-4 rounded-full ring-0 transition-transform data-[checked]:translate-x-[calc(100%-2px)] data-[unchecked]:translate-x-0 border border-ring/20"
+				)}
+			/>
 		</SwitchPrimitive.Root>
-	);
-} 
+	)
+}
+
+export { Switch } 

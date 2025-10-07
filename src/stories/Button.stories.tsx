@@ -19,7 +19,6 @@ const meta = {
 	argTypes: {
 		variant: { control: 'select', options: ['default', 'secondary', 'outline', 'ghost', 'destructive'] },
 		size: { control: 'select', options: ['sm', 'default', 'lg', 'icon'] },
-		radius: { control: 'select', options: ['default', 'full'] }
 	},
 	// Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
 	args: { onClick: fn() },
@@ -115,9 +114,4 @@ export const Icon: Story = {
 	},
 }
 
-export const Loading: Story = {
-	args: {
-		children: <div className='flex items-center gap-2'><ConfettiIcon />Hoorah</div>,
-		loading: true
-	},
-}
+
