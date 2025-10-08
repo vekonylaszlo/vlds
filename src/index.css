@@ -75,6 +75,18 @@
 	--alert-warning-shadow: oklch(0.53 0.13 54.65 / 0.15) 0px 0 6px, oklch(0.53 0.13 54.65 / 0.2) 0px 1px 6px;
 	--alert-success-shadow: oklch(0.51 0.13 147.43 / 0.15) 0 0 6px, oklch(0.51 0.13 147.43 / 0.2) 0px 1px 6px;
 	--alert-danger-shadow: oklch(0.55 0.2 25.29 / 0.15) 0 0 6px, oklch(0.55 0.2 25.29 / 0.2) 0px 1px 6px;
+
+	--btusa-50: oklch(0.98 0.02 206.44);
+	--btusa-100: oklch(0.94 0.04 211.5);
+	--btusa-200: oklch(0.9 0.06 212.03);
+	--btusa-300: oklch(0.83 0.1 215.65);
+	--btusa-400: oklch(0.74 0.12 221.17);
+	--btusa-500: oklch(0.65 0.12 224.62);
+	--btusa-600: oklch(0.56 0.11 231.1);
+	--btusa-700: oklch(0.48 0.09 232.22);
+	--btusa-800: oklch(0.42 0.07 233.04);
+	--btusa-900: oklch(0.38 0.06 234.63);
+	--btusa-950: oklch(0.26 0.04 237.37);
 }
 
 .dark {
@@ -149,6 +161,19 @@
 	--alert-warning-shadow: oklch(0.77 0.16 73.3) 0px 0 1px;
 	--alert-success-shadow: oklch(0.73 0.14 147.99) 0 0 1px;
 	--alert-danger-shadow: oklch(0.7 0.19 21.75) 0 0 1px;
+
+	--btusa-50: oklch(0.98 0.02 206.44);
+	--btusa-100: oklch(0.94 0.04 211.5);
+	--btusa-200: oklch(0.9 0.06 212.03);
+	--btusa-300: oklch(0.83 0.1 215.65);
+	--btusa-400: oklch(0.74 0.12 221.17);
+	--btusa-500: oklch(0.65 0.12 224.62);
+	--btusa-600: oklch(0.56 0.11 231.1);
+	--btusa-700: oklch(0.48 0.09 232.22);
+	--btusa-800: oklch(0.42 0.07 233.04);
+	--btusa-900: oklch(0.38 0.06 234.63);
+	--btusa-950: oklch(0.26 0.04 237.37);
+
 }
 
 @theme inline {
@@ -213,6 +238,17 @@
 	--color-alert-foreground-info: var(--alert-foreground-info);
 	--color-alert-foreground-success: var(--alert-foreground-success);
 	--color-alert-foreground-danger: var(--alert-foreground-danger);
+	--color-btusa-50: var(--color-btusa-50);
+	--color-btusa-100: var(--btusa-100);
+	--color-btusa-200: var(--btusa-200);
+	--color-btusa-300: var(--btusa-300);
+	--color-btusa-400: var(--btusa-400);
+	--color-btusa-500: var(--btusa-500);
+	--color-btusa-600: var(--btusa-600);
+	--color-btusa-700: var(--btusa-700);
+	--color-btusa-800: var(--btusa-800);
+	--color-btusa-900: var(--btusa-900);
+	--color-btusa-950: var(--btusa-950);
 
 	--shadow-tab: var(--tab-shadow);
 	--shadow-input: var(--input-shadow);
