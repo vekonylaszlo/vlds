@@ -16,10 +16,10 @@ export function CircularProgress({ size = 14, value }: CircularProgressType) {
 	const offset = circumference - (displayPercent / 100) * circumference;
 
 	const progressColor = () => {
-		if (displayPercent >= 50 && displayPercent <= 75) {
+		if (displayPercent >= 50 && displayPercent <= 95) {
 			return "var(--toast-background)"
 		}
-		if (displayPercent > 75) {
+		if (displayPercent > 95) {
 			return "var(--toast-background-success)"
 		}
 		if (displayPercent >= 0 && displayPercent < 50) {

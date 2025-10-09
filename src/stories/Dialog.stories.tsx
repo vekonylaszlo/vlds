@@ -87,8 +87,8 @@ export const AlertDialogComponent: Story = {
 				<DialogPortal>
 					<DialogBackdrop />
 					<DialogPopup title='Are you sure?' description='You will remove the files'>
-						<Flex className='p-2 flex-row-reverse'>
-							<Button>Yeah</Button>
+						<Flex className='p-1 flex-row-reverse' gap='gap-1'>
+							<Button variant="destructive">Yeah</Button>
 							<Button variant="secondary">Cancel</Button>
 						</Flex>
 					</DialogPopup>

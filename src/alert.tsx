@@ -25,14 +25,14 @@ function getIcon(variant: "info" | "warning" | "danger" | "success") {
 
 
 const alertVariants = cva(
-	"relative w-full rounded-lg border px-4 py-3 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current",
+	"relative w-full rounded-lg px-4 py-3 text-sm grid has-[>svg]:grid-cols-[calc(var(--spacing)*4)_1fr] grid-cols-[0_1fr] has-[>svg]:gap-x-3 gap-y-0.5 items-start [&>svg]:size-4 [&>svg]:translate-y-0.5 [&>svg]:text-current grad-mask",
 	{
 		variants: {
 			variant: {
-				default: "bg-alert-info text-alert-foreground-info",
-				success: "bg-alert-success text-alert-foreground-success",
-				warning: "bg-alert-warning text-alert-foreground-warning",
-				danger: "bg-alert-danger text-alert-foreground-danger",
+				default: "bg-alert-info text-alert-foreground-info grad-mask-alert-info",
+				success: "bg-alert-success text-alert-foreground-success grad-mask-alert-success",
+				warning: "bg-alert-warning text-alert-foreground-warning grad-mask-alert-warning",
+				danger: "bg-alert-danger text-alert-foreground-danger grad-mask-alert-danger",
 			},
 		},
 		defaultVariants: {

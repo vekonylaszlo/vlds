@@ -4,7 +4,7 @@
 
 
 :root {
-	--brand: oklch(0.45 0.05 139.44);
+	--brand: oklch(0.65 0.12 224.62);
 	--background: oklch(0.95 0 0);
 	--foreground: oklch(0.145 0 0);
 	--card: oklch(0.99 0 0);
@@ -26,7 +26,7 @@
 	--arctic-foreground: oklch(0.49 0.13 259);
 	--arctic-outline: oklch(0.69 0.12 254.87);
 	--muted: oklch(0.97 0 0);
-	--muted-foreground: oklch(0.81 0 0);
+	--muted-foreground: oklch(0.66 0.01 17.37);
 	--accent: oklch(0.97 0 0);
 	--accent-foreground: oklch(0.205 0 0);
 	--destructive: oklch(0.66 0.16 28.14);
@@ -35,6 +35,7 @@
 	--border: oklch(0.922 0 0);
 	--input: oklch(0.97 0 0);
 	--input-outline: oklch(0.91 0 0);
+	--input-placeholder: oklch(0.63 0.01 59.59);
 	--ring: oklch(0.708 0 0);
 	--chart-1: oklch(0.646 0.222 41.116);
 	--chart-2: oklch(0.6 0.118 184.704);
@@ -145,6 +146,38 @@
 				oklch(95% 0 0) 69.03%,
 				oklch(100% 0 0) 96.99%) border-box;
 	}
+
+	.grad-mask-alert-info {
+		--grad-bg: linear-gradient(-5deg,
+				oklch(from var(--alert-foreground-info) l c h / 0.1) 6.2%,
+				oklch(from var(--alert-foreground-info) l c h / 0.1) 21.56%,
+				oklch(from var(--alert-foreground-info) l c h / 0.15) 69.03%,
+				oklch(from var(--alert-foreground-info) l c h / 0.3) 96.99%) border-box;
+	}
+
+	.grad-mask-alert-warning {
+		--grad-bg: linear-gradient(-5deg,
+				oklch(from var(--alert-foreground-warning) l c h / 0.1) 6.2%,
+				oklch(from var(--alert-foreground-warning) l c h / 0.1) 21.56%,
+				oklch(from var(--alert-foreground-warning) l c h / 0.15) 69.03%,
+				oklch(from var(--alert-foreground-warning) l c h / 0.3) 96.99%) border-box;
+	}
+
+	.grad-mask-alert-danger {
+		--grad-bg: linear-gradient(-5deg,
+				oklch(from var(--alert-foreground-danger) l c h / 0.1) 6.2%,
+				oklch(from var(--alert-foreground-danger) l c h / 0.1) 21.56%,
+				oklch(from var(--alert-foreground-danger) l c h / 0.15) 69.03%,
+				oklch(from var(--alert-foreground-danger) l c h / 0.3) 96.99%) border-box;
+	}
+
+	.grad-mask-alert-success {
+		--grad-bg: linear-gradient(-5deg,
+				oklch(from var(--alert-foreground-success) l c h / 0.1) 6.2%,
+				oklch(from var(--alert-foreground-success) l c h / 0.1) 21.56%,
+				oklch(from var(--alert-foreground-success) l c h / 0.15) 69.03%,
+				oklch(from var(--alert-foreground-success) l c h / 0.3) 96.99%) border-box;
+	}
 }
 
 .dark {
@@ -195,6 +228,7 @@
 	--tab: oklch(0.28 0.01 285.42);
 	--input: oklch(0.14 0 0);
 	--input-outline: none;
+	--input-placeholder: oklch(0.68 0 0);
 	--item-highlighted: oklch(0.24 0 0 / 0.8);
 
 	--toast-background: oklch(0.65 0.19 251.47);
@@ -270,6 +304,38 @@
 				oklch(20% 0 0) 69.03%,
 				oklch(40% 0 0) 96.99%) border-box;
 	}
+
+	.grad-mask-alert-info {
+		--grad-bg: linear-gradient(-5deg,
+				oklch(from var(--alert-foreground-info) l c h / 0.1) 6.2%,
+				oklch(from var(--alert-foreground-info) l c h / 0.1) 21.56%,
+				oklch(from var(--alert-foreground-info) l c h / 0.15) 69.03%,
+				oklch(from var(--alert-foreground-info) l c h / 0.5) 96.99%) border-box;
+	}
+
+	.grad-mask-alert-warning {
+		--grad-bg: linear-gradient(-5deg,
+				oklch(from var(--alert-foreground-warning) l c h / 0.1) 6.2%,
+				oklch(from var(--alert-foreground-warning) l c h / 0.1) 21.56%,
+				oklch(from var(--alert-foreground-warning) l c h / 0.15) 69.03%,
+				oklch(from var(--alert-foreground-warning) l c h / 0.5) 96.99%) border-box;
+	}
+
+	.grad-mask-alert-danger {
+		--grad-bg: linear-gradient(-5deg,
+				oklch(from var(--alert-foreground-danger) l c h / 0.1) 6.2%,
+				oklch(from var(--alert-foreground-danger) l c h / 0.1) 21.56%,
+				oklch(from var(--alert-foreground-danger) l c h / 0.15) 69.03%,
+				oklch(from var(--alert-foreground-danger) l c h / 0.5) 96.99%) border-box;
+	}
+
+	.grad-mask-alert-success {
+		--grad-bg: linear-gradient(-5deg,
+				oklch(from var(--alert-foreground-success) l c h / 0.1) 6.2%,
+				oklch(from var(--alert-foreground-success) l c h / 0.1) 21.56%,
+				oklch(from var(--alert-foreground-success) l c h / 0.15) 69.03%,
+				oklch(from var(--alert-foreground-success) l c h / 0.5) 96.99%) border-box;
+	}
 }
 
 @theme inline {
@@ -304,6 +370,7 @@
 	--color-border: var(--border);
 	--color-input: var(--input);
 	--color-input-outline: var(--input-outline);
+	--color-input-placeholder: var(--input-placeholder);
 	--color-ring: var(--ring);
 	--color-chart-1: var(--chart-1);
 	--color-chart-2: var(--chart-2);
@@ -394,4 +461,9 @@
 	}
 
 	/* linear-gradient(0deg, bottom 6.2%, side-bottom 21.56%, side-top 69.03%, top 96.99%) border-box; */
+	.surface {
+		background: linear-gradient(180.9deg, rgba(51, 51, 57, 0.7) -0.58%, rgba(53, 53, 56, 0.7) 66.34%, rgba(38, 38, 39, 0.7) 101.25%, rgba(62, 62, 62, 0.4));
+		box-shadow: rgba(0, 0, 0, 0.24) 4px 16px 36px;
+		border-radius: 7px;
+	}
 }

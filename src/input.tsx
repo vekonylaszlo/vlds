@@ -8,7 +8,7 @@ export type InputProps = React.ComponentProps<typeof InputPrimitive> & {
 }
 
 // TODO: Valahogyan meg kell oldani, hogy ne kelljen sötét módban border / border-transparent értéket adni. Ehhez az kell, hogy a ring működjön sötét módban!
-export const inputClass = "transition-all duration-200 bg-input text-foreground py-2 w-full rounded-[14px] px-3.5 text-base shadow-input placeholder:text-muted-foreground dark:border dark:border-transparent dark:focus-within:not-border-none focus-within:ring focus-within:ring-input-ring dark:focus-within:border dark:focus-within:border-input-ring relative grad-mask grad-mask-surface outline-input-outline"
+export const inputClass = "transition-all duration-200 bg-input text-foreground py-2 w-full rounded-[14px] px-3.5 text-base shadow-input placeholder:text-input-placeholder dark:border dark:border-transparent dark:focus-within:not-border-none focus-within:ring focus-within:ring-input-ring dark:focus-within:border dark:focus-within:border-input-ring relative grad-mask grad-mask-surface outline-input-outline"
 
 export function Input({
 	className,

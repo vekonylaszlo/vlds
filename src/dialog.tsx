@@ -39,18 +39,18 @@ export function DialogPopup({ title, description, className, fullscreen = false,
 	fullscreen?: boolean;
 }) {
 	return (
-		<DialogPrimitive.Popup className={cn("fixed bg-popover/95 backdrop-blur-2xl text-popover-foreground p-2 transition-all duration-300 data-[ending-style]:-translate-y-20 data-[starting-style]:-translate-y-20 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0", {
+		<DialogPrimitive.Popup className={cn("fixed bg-popover text-popover-foreground p-2 transition-all duration-300 data-[ending-style]:-translate-y-20 data-[starting-style]:-translate-y-20 data-[ending-style]:opacity-0 data-[starting-style]:opacity-0", {
 			"w-full h-full translate-x-0 translate-y-0 left-0 top-0 mt-0 max-w-full": fullscreen,
-			"top-[calc(50%+1.25rem*var(--nested-dialogs))] left-1/2 sm:-mt-8 w-96 max-w-[calc(100vw-3rem)] -translate-x-1/2 border border-border rounded-md -translate-y-1/2 scale-[calc(1-0.1*var(--nested-dialogs))] min-w-full min-h-full sm:min-w-[460px] sm:min-h-fit shadow-lg": !fullscreen
+			"top-[calc(50%+1.25rem*var(--nested-dialogs))] left-1/2 sm:-mt-8 w-96 max-w-[calc(100vw-3rem)] -translate-x-1/2 rounded-lg -translate-y-1/2 scale-[calc(1-0.1*var(--nested-dialogs))] min-w-full min-h-full sm:min-w-[460px] sm:min-h-fit shadow-2xl grad-mask grad-mask-surface": !fullscreen
 		}, className)} {...props} >
 			<div className="flex flex-col w-full h-full items-center">
 				<div className={cn("flex flex-col gap-4 w-full h-full items-center", {
 					"w-2/3": fullscreen
 				})}>
-					<div className="flex flex-col w-full text-left h-full">
-						<DialogTitle className="mb-6 pl-2">{title}</DialogTitle>
+					<div className="flex flex-col w-full text-left h-full p-3">
+						<DialogTitle className="">{title}</DialogTitle>
 						{description && <DialogDescription>{description}</DialogDescription>}
-						<div className='h-full w-full flex flex-col overflow-y-auto p-2'>
+						<div className='h-full w-full flex flex-col overflow-y-auto p-1'>
 							{props.children}
 						</div>
 
@@ -81,7 +81,7 @@ export type DialogTitleProps = React.ComponentProps<typeof DialogPrimitive.Title
 
 export function DialogDescription({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Description>) {
 	return (
-		<DialogPrimitive.Description className={cn("mb-2 ml-2.5 text-sm text-muted-foreground", className)} {...props} />
+		<DialogPrimitive.Description className={cn("text-sm text-muted-foreground", className)} {...props} />
 	)
 }
 
@@ -89,7 +89,7 @@ export type DialogDescriptionProps = React.ComponentProps<typeof DialogPrimitive
 
 export function DialogClose({ className, ...props }: React.ComponentProps<typeof DialogPrimitive.Close>) {
 	return (
-		<DialogPrimitive.Close className={cn(buttonVariants({ size: "sm", variant: "secondary", className: "rounded-full" }), className)} {...props} >
+		<DialogPrimitive.Close className={cn(buttonVariants({ size: "icon", variant: "ghost" }), className)} {...props} >
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></svg>
 		</DialogPrimitive.Close>
 	)
