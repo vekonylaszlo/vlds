@@ -1,3 +1,4 @@
+import { inputClass } from "./input";
 import { cn } from "./utils"
 import { Combobox as ComboboxPrimitive } from "@base-ui-components/react/combobox"
 
@@ -12,7 +13,7 @@ export type ComboboxRootProps = React.ComponentProps<typeof ComboboxPrimitive.Ro
 
 export function ComboboxInput({ className, ...props }: React.ComponentProps<typeof ComboboxPrimitive.Input>) {
 	return (
-		<ComboboxPrimitive.Input className={cn("transition-all h-9 bg-input text-foreground w-full max-w-64 rounded-md pl-3.5 text-base outline outline-zinc-950/10 shadow-input placeholder:text-muted-foreground", className)} {...props} />
+		<ComboboxPrimitive.Input className={cn(inputClass, "outline-none", className)} {...props} />
 	)
 }
 
@@ -42,7 +43,7 @@ export type ComboboxPortalProps = React.ComponentProps<typeof ComboboxPrimitive.
 
 export function ComboboxPositioner({ className, ...props }: React.ComponentProps<typeof ComboboxPrimitive.Positioner>) {
 	return (
-		<ComboboxPrimitive.Positioner className={cn("outline-none", className)} {...props} />
+		<ComboboxPrimitive.Positioner className={cn("outline-none ", className)} {...props} />
 	)
 }
 
@@ -50,7 +51,7 @@ export type ComboboxPositionerProps = React.ComponentProps<typeof ComboboxPrimit
 
 export function ComboboxPopup({ className, ...props }: React.ComponentProps<typeof ComboboxPrimitive.Popup>) {
 	return (
-		<ComboboxPrimitive.Popup className={cn("w-[var(--anchor-width)] max-h-[min(var(--available-height),23rem)] m-2 max-w-[var(--available-width)] origin-[var(--transform-origin)] overflow-y-auto scroll-pt-2 scroll-pb-2 overscroll-contain rounded-md bg-popover backdrop-blur-2xl text-popover-foreground py-2 shadow-lg outline outline-zinc-950/10 transition-[transform,scale,opacity] data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[side=none]:data-[ending-style]:transition-none data-[starting-style]:scale-95 data-[starting-style]:opacity-0 data-[side=none]:data-[starting-style]:scale-100 data-[side=none]:data-[starting-style]:opacity-100 data-[side=none]:data-[starting-style]:transition-none dark:shadow-input dark:-outline-offset-1", className)} {...props} />
+		<ComboboxPrimitive.Popup className={cn("w-[var(--anchor-width)] max-h-[min(var(--available-height),23rem)] m-2 max-w-[var(--available-width)] origin-[var(--transform-origin)] overflow-y-auto scroll-pt-2 scroll-pb-2 overscroll-contain rounded-xl bg-popover text-popover-foreground py-2 shadow-lg transition-[transform,scale,opacity] data-[ending-style]:scale-95 data-[ending-style]:opacity-0 data-[side=none]:data-[ending-style]:transition-none data-[starting-style]:scale-95 data-[starting-style]:opacity-0 data-[side=none]:data-[starting-style]:scale-100 data-[side=none]:data-[starting-style]:opacity-100 data-[side=none]:data-[starting-style]:transition-none dark:shadow-input dark:-outline-offset-1 relative grad-mask grad-mask-surface", className)} {...props} />
 	)
 }
 
@@ -65,9 +66,9 @@ export function ComboboxEmpty({ className, ...props }: React.ComponentProps<type
 
 export type ComboboxEmptyProps = React.ComponentProps<typeof ComboboxPrimitive.Empty>;
 
-export function ComboboxList({ ...props }: React.ComponentProps<typeof ComboboxPrimitive.List>) {
+export function ComboboxList({ className, ...props }: React.ComponentProps<typeof ComboboxPrimitive.List>) {
 	return (
-		<ComboboxPrimitive.List {...props} />
+		<ComboboxPrimitive.List className={cn(className, "")} {...props} />
 	)
 }
 

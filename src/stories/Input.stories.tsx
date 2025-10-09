@@ -1,5 +1,6 @@
 import { Input } from "../input";
 import type { Meta, StoryObj } from '@storybook/react'
+import { PasswordIcon } from "@phosphor-icons/react";
 
 const meta = {
 	title: 'Example/Input',
@@ -22,7 +23,7 @@ export const InputComponent: Story = {
 			<label htmlFor='test' className='flex flex-col gap-1 font-semibold focus-visible:outline-none'>
 				Input label
 			</label>
-			<Input {...args} />
+			<Input rightDecor={<PasswordIcon />} {...args} />
 		</div>
 	)
 };

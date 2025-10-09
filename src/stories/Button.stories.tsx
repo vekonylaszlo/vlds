@@ -93,6 +93,32 @@ export const Destructive: Story = {
 	)
 };
 
+export const Warning: Story = {
+	args: {
+		variant: "warning"
+	},
+	render: (args) => (
+		<div className='flex gap-6  w-screen h-screen justify-center items-center'>
+			<Button {...args}>Default</Button>
+			<Button {...args} id="hovered">Hovered</Button>
+			<Button {...args} id="active">Active</Button>
+		</div>
+	)
+};
+
+export const Arctic: Story = {
+	args: {
+		variant: "arctic"
+	},
+	render: (args) => (
+		<div className='flex gap-6  w-screen h-screen justify-center items-center'>
+			<Button {...args}>Default</Button>
+			<Button {...args} id="hovered">Hovered</Button>
+			<Button {...args} id="active">Active</Button>
+		</div>
+	)
+};
+
 export const Large: Story = {
 	args: {
 		size: 'lg',

@@ -25,6 +25,7 @@ export { Field, FieldControl, FieldLabel, FieldValidity, FieldError, FieldDescri
 export { Form } from './form'
 export { MorphLogoProvider, useMorphLogo, MorphLogoContext } from './morph-logo-context'
 export { MorphLogo } from './morph-logo'
+export { CircularProgress } from './circular-progress'
 
 export type { InputProps } from './input'
 export type { ButtonProps, buttonVariants } from './button'
@@ -49,3 +50,4 @@ export type { FieldProps, FieldErrorProps, FieldLabelProps, FieldValidityProps, 
 export type { FormProps } from './form'
 export type { MorphAnimationName, MorphLogoContextValue } from './morph-logo-context'
 export type { Frame, FrameState } from './morph-logo'
+export type { CircularProgressType } from './circular-progress'
