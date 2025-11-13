@@ -1,6 +1,6 @@
 {
 	"name": "@vekonylaszlo/vlds",
-	"version": "0.0.34",
+	"version": "0.0.35",
 	"type": "module",
 	"exports": {
 		".": {
@@ -47,7 +47,7 @@
 		"react-dom": ">=18.3.1"
 	},
 	"dependencies": {
-		"@base-ui-components/react": "^1.0.0-beta.3",
+		"@base-ui-components/react": "^1.0.0-beta.4",
 		"@phosphor-icons/react": "^2.1.10",
 		"@tailwindcss/postcss": "^4.1.13",
 		"class-variance-authority": "^0.7.1",

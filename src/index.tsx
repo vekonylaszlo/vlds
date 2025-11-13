@@ -26,6 +26,7 @@ export { Form } from './form'
 export { MorphLogoProvider, useMorphLogo, MorphLogoContext } from './morph-logo-context'
 export { MorphLogo } from './morph-logo'
 export { CircularProgress } from './circular-progress'
+export { SelectRoot, SelectTrigger, SelectArrow, SelectPositioner, SelectBackdrop, SelectScrollUpArrow, SelectScrollDownArrow, SelectPopup, SelectList, SelectItem, SelectItemText, SelectItemIndicator, SelectSeparator, SelectGroup, SelectGroupLabel, SelectPortal, SelectValue, SelectIcon } from './select'
 
 export type { InputProps } from './input'
 export type { ButtonProps, buttonVariants } from './button'
@@ -51,3 +52,4 @@ export type { FormProps } from './form'
 export type { MorphAnimationName, MorphLogoContextValue } from './morph-logo-context'
 export type { Frame, FrameState } from './morph-logo'
 export type { CircularProgressType } from './circular-progress'
+export type { SelectRootProps, SelectPositionerProps, SelectPortalProps, SelectPopupProps, SelectScrollDownArrowProps, SelectListProps, SelectScrollUpArrowProps, SelectItemTextProps, SelectSeparatorProps, SelectTriggerProps, SelectValueProps, SelectItemProps, SelectItemIndicatorProps, SelectIconProps, SelectBackdropProps, SelectArrowProps, SelectGroupLabelProps, SelectGroupProps } from "./select"
